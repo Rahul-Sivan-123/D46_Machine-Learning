@@ -50,7 +50,7 @@ SVR finds a hyperplane that best fits the data while allowing a margin of tolera
 Suitable for small-to-medium datasets where complex, non-linear relationships exist.
 
 # Comparison and Findings
-Best-performing model:Gradient Boosting Regressor or Random Forest Regressor, as ensemble methods tend to achieve high accuracy by reducing overfitting while capturing complex patterns.
+Best-performing model: Random Forest Regressor, as ensemble methods tend to achieve high accuracy by reducing overfitting while capturing complex patterns.
 
-Worst-performing model: Typically Linear Regression or SVR, since Linear Regression assumes a linear relationship, which may not hold for housing prices.
+Worst-performing model: SVR, since Linear Regression assumes a linear relationship, which may not hold for housing prices.
   
