@@ -100,5 +100,38 @@ Created dictionary to store model predictions and evaluated performance.
 # Insights
 Best Performing Model: Random Forest Classifier is likely to perform the best. It combines multiple decision trees, reduces overfitting, and excels in feature-rich datasets.
 
+
+# ML Assignment-5(Clustering Algorithm)
+Assignment-5 is about ML Clustering Algorithm.
+The data set used in this assignment is Iris dataset from the sklearn library.
+
+# Loading & Pre-Processing:
+Load the Iris dataset from sklearn. Drop the species column since this is a clustering problem.
+
+# Clustering Algorithm Implementation:
+
+    A).KMeans Clustering:
+    K-Means is a popular clustering algorithm that aims to partition data into 𝑘 clusters. 
+How it works:   
+1. Initializing 𝑘 centroids randomly.  
+2. Assigning each data point to the nearest centroid.
+3. Updating centroids based on the mean of assigned points.
+4. Repeating steps 2 and 3 until centroids stabilize.
+   
+   Suitability:
+1. The Iris dataset has well-defined clusters corresponding to species.
+2. K-Means efficiently groups data based on numerical features like petal and sepal measurements.
+3. Since the dataset is small and relatively balanced, K-Means performs well in detecting natural groupings.
+
+    B).Hierarchical Clustering:
+    How it works:
+   Hierarchical clustering builds a hierarchy of clusters in two ways:
+#Agglomerative (bottom-up): Each point starts as its own cluster, and similar clusters merge iteratively.          
+#Divisive (top-down): All points start in one cluster and split recursively into smaller clusters.
+
+Suitability:
+1.The method captures natural hierarchies in the data.  
+2. No need to specify the number of clusters beforehand.  
+3. Can visualize relationships between clusters using dendrograms.
 Worst Performing Model: Decision Tree Classifier could be the weakest due to potential overfitting and lower generalization capability.
   
