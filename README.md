@@ -123,8 +123,8 @@ How it works:
 2. K-Means efficiently groups data based on numerical features like petal and sepal measurements.
 3. Since the dataset is small and relatively balanced, K-Means performs well in detecting natural groupings.
 
-    B).Hierarchical Clustering:
-    How it works:
+         B).Hierarchical Clustering:
+   How it works:
    Hierarchical clustering builds a hierarchy of clusters in two ways:
 #Agglomerative (bottom-up): Each point starts as its own cluster, and similar clusters merge iteratively.          
 #Divisive (top-down): All points start in one cluster and split recursively into smaller clusters.
