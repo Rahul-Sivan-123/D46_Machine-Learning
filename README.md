@@ -118,20 +118,20 @@ How it works:
 3. Updating centroids based on the mean of assigned points.
 4. Repeating steps 2 and 3 until centroids stabilize.
    
-   Suitability:
+   **Suitability:**
+   
 1. The Iris dataset has well-defined clusters corresponding to species.
 2. K-Means efficiently groups data based on numerical features like petal and sepal measurements.
 3. Since the dataset is small and relatively balanced, K-Means performs well in detecting natural groupings.
 
          B).Hierarchical Clustering:
-   How it works:
-   Hierarchical clustering builds a hierarchy of clusters in two ways:
+   How it works: Hierarchical clustering builds a hierarchy of clusters in two ways:
 #Agglomerative (bottom-up): Each point starts as its own cluster, and similar clusters merge iteratively.          
 #Divisive (top-down): All points start in one cluster and split recursively into smaller clusters.
 
-Suitability:
+**Suitability:**
+
 1.The method captures natural hierarchies in the data.  
 2. No need to specify the number of clusters beforehand.  
 3. Can visualize relationships between clusters using dendrograms.
-Worst Performing Model: Decision Tree Classifier could be the weakest due to potential overfitting and lower generalization capability.
   
