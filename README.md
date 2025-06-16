@@ -136,3 +136,91 @@ How it works:
 2. No need to specify the number of clusters beforehand.  
 3. Can visualize relationships between clusters using dendrograms.
   
+# ML Module End Assignment (Car Price Prediction)
+
+# Overview:
+This project aims to analyze and predict car prices in the US market using machine learning techniques. A Chinese automobile company is looking to establish a local manufacturing unit and understand the pricing dynamics to compete with existing US and European manufacturers. The goal is to identify key factors affecting car prices and build a predictive model.
+
+Dataset:
+The dataset contains various attributes about cars, including technical specifications, fuel type, body type, engine details, and pricing.
+
+# Dataset Source: https://drive.google.com/file/d/1FHmYNLs9v0Enc-UExEMpitOFGsWvB2dP/view?
+
+Key Features:
+
+##  Categorical: fueltype, carbody, drivewheel, enginetype, cylindernumber, etc.
+
+## Numerical: wheelbase, carlength, carwidth, enginesize, horsepower, etc.
+
+## Target variable:price
+   
+
+# Methodology
+# 1. Data Preprocessing:
+
+. Removed irrelevant columns (car_ID, CarName).
+
+. Encoded categorical features using one-hot encoding.
+
+. Standardized numerical features using StandardScaler.
+
+. Split dataset into training (80%) and testing (20%) sets.
+
+# 2. Model Implementation:
+Trained five regression models to predict car prices:
+
+. Linear Regression
+
+. Decision Tree Regressor
+
+. Random Forest Regressor
+
+. Gradient Boosting Regressor
+
+. Support Vector Regressor (SVR)
+
+# 3. Model Evaluation
+Compared models using:
+
+. R-squared (R²)
+
+. Mean Squared Error (MSE)
+
+. Mean Absolute Error (MAE)
+
+    # Best Model Identified: Random Forest Regressor (Highest R², Lowest MSE & MAE)
+
+# 4. Feature Importance Analysis:
+Used correlation analysis and Random Forest feature importance.
+
+. Most influential features:
+
+. Engine Size
+
+. Horsepower
+
+. Curb Weight
+
+. Drive Wheel Type
+
+. Fuel Type
+
+# 5. Hyperparameter Tuning
+. Applied GridSearchCV to optimize model parameters.
+
+. Improved R² score and reduced prediction errors.
+
+# 6. Visualization
+. Heatmap: Shows correlation between numerical features.
+
+. Feature Importance Plot: Ranks top predictors of car price.
+
+. Actual vs. Predicted Prices Scatter Plot: Evaluates model accuracy.
+
+# Inferences
+
+    1.Engine Size & Horsepower have the strongest impact on car prices.
+
+    2.The optimized Random Forest model achieved a higher R² score (0.958875) over initial value (0.88831).
+
+    3.Random Forest Regressor performed best(higher R² score)
