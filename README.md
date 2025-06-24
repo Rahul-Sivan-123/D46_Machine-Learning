@@ -224,3 +224,76 @@ Used correlation analysis and Random Forest feature importance.
     2.The optimized Random Forest model achieved a higher R² score (0.958875) over initial value (0.88831).
 
     3.Random Forest Regressor performed best(higher R² score)
+
+****-------------------------*****
+
+# ML Final Project (Online Shoppers Purchasing Intention Dataset)
+
+# Overview:
+The goal of this project is to predict whether an online shopping session will lead to a purchase, using user behavior and session-level attributes. By analyzing session features such as page visits, durations, bounce rates, and user types, we aim to uncover behavioral patterns that distinguish buyers from non-buyers. These insights can help e-commerce platforms optimize their user experience.
+
+# Dataset Overview:  
+The dataset was sourced from the UCI Machine Learning Repository. It includes information on user behavior during online shopping sessions and whether they resulted in a purchase (`Revenue`).
+
+*Dataset Highlights:*
+- **12,330** records
+- **17 features** + Target column (`Revenue`)
+- Includes **numeric** and **categorical** data  
+
+# Dataset Source: https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset
+
+# Key Features:
+
+Categorical Data: `Month`,`VisitorType`,`Weekend`, `Revenue`.
+
+Numerical Data: `Administrative`,`Administrative_Duration`,     `Informational`, `Informational_Duration`, `ProductRelated`, `ProductRelated_Duration`, `BounceRates`, `ExitRates`, `PageValues`, `SpecialDay`, `OperatingSystems`, `Browser`, `Region`, `TrafficType`.
+
+Target variable: `price` ( `True ` if purchase was made, else  `False `)
+   
+
+# Methodology
+
+### 1. **Loading & Data Preprocessing**
+
+- Identified number of rows and features in dataset.
+
+- Checked the dataset for null values.
+
+- Checked number of duplicates and dropped it.
+
+- Identified the unique values.
+
+- Gathered information about the numerical data in dataset.
+
+ #### (a) Identified numerical and categorical Features
+  #### (b) Outlier Detection(By IQR Method) and Visualization (Boxplot)
+  #### (c) Outlier Removal (By Trimming Method)
+  #### (d) Outlier Visualization Before and After Trimming
+
+### i. **Data Encoding of Categorical Features**
+- Done the data Encoding of Categorical Features (['Month', 'VisitorType', 'Weekend', 'Revenue'])
+- Encoded '**Month**' by Mapping.
+- Encoded '**Weekend**' & '**Revenue**' from boolean value to int datatype.
+- Encoded '**VisitorType**' by One-hot encoding.
+
+#### (a)  Skewness and Kurtosis check of Dataset
+- Checked Skewness and Kurtosis 
+- Combined into a dataframe(`distribution_metrics`)
+
+### ii. **Data Transformation**
+- Done data transformation by log method.
+- Created Histogram plot to view the difference before and after transformation.
+
+### 2. **EDA & Visualization**
+- Histograms before and after transformation.
+- Correlation heatmap for numeric features
+- Categorical analysis using bar plots (`Month`, `VisitorType`, `Weekend`).
+
+
+
+
+
+
+
+
+    
