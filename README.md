@@ -303,6 +303,7 @@ Target variable: `price` ( `True ` if purchase was made, else  `False `)
 -     X_scaled=scaler.fit_transform(X_encoded)
 
   ### iv. **Train-Test Split**
+- Splitted and assigned data for training(80%).
 
 ### 3. **Addressing Class Imbalance**
 - Target distribution was imbalanced (False > True)
@@ -323,6 +324,27 @@ Target variable: `price` ( `True ` if purchase was made, else  `False `)
        X_train_bal, y_train_bal = smote.fit_resample(X_train, y_train) 
 
 -  Now we will get a balanced training set (y_train_bal) with an equal number of True and False values.
+
+- ### 4. **Training the Models**
+- Three classifiers were trained on the balanced data:
+
+- Logistic Regression
+- Random Forest
+- Gradient Boosting
+
+**Each model was tuned using GridSearchCV with 5-fold cross-validation and roc_auc as the scoring metric.*
+
+### 4. **Model Evaluation and Performance Comparison**
+
+-Models were evaluated on the original (imbalanced) test set using:
+
+- Accuracy
+
+- F1 Score
+
+- ROC AUC
+
+**Results were compiled into a summary DataFrame for comparison.*
 
 
 
