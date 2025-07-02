@@ -303,7 +303,7 @@ Target variable: `price` ( `True ` if purchase was made, else  `False `)
 -     X_scaled=scaler.fit_transform(X_encoded)
 
   ### iv. **Train-Test Split**
-- Splitted and assigned data for training(80%).
+- splitted and assigned data for training (80%).
 
 ### 3. **Addressing Class Imbalance**
 - Target distribution was imbalanced (False > True)
@@ -345,6 +345,19 @@ Target variable: `price` ( `True ` if purchase was made, else  `False `)
 - ROC AUC
 
 **Results were compiled into a summary DataFrame for comparison.*
+
+### 5. **Hyperparameter Tuning**
+-Hypertuned the parameters to get the best score.
+
+- Evaluated best hyperparameters and cross-validated AUC for Best Model. Then compared the Performance again.
+
+### 6. **Feature Importance (Gradient Boosting) and Visualization**
+
+-  Extracted feature importance from the best model and
+- Visualized top 20 most important features using `best_model.feature_importances_`
+
+### 7. **Purchase Intention prediction**
+- Predicted few samples.
 
 
 
