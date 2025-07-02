@@ -288,6 +288,76 @@ Target variable: `price` ( `True ` if purchase was made, else  `False `)
 - Histograms before and after transformation.
 - Correlation heatmap for numeric features
 - Categorical analysis using bar plots (`Month`, `VisitorType`, `Weekend`).
+- -Revenue by Month (Bar Plot)
+-Revenue by Visitor(Bar Plot)
+-Revenue by Weekend ( Count Plot)
+
+iii. Feature Scaling
+Separated Features and Target
+
+  X = df_log.drop('Revenue', axis=1)
+  y = df_log['Revenue']
+Initialize Standard Scaler
+
+ scaler=StandardScaler()
+Fit and transformed the numerical features.
+
+X_scaled=scaler.fit_transform(X_encoded)
+iv. Train-Test Split
+3. Addressing Class Imbalance
+Target distribution was imbalanced (False > True)
+
+print(df['Revenue'].value_counts())
+print("\nClass Distribution (as percentage):")
+print(df['Revenue'].value_counts(normalize=True) * 100)
+Class Distribution (as percentage):
+Revenue
+False 84.367063
+True 15.632937
+
+Used SMOTE to oversample the minority class in training data
+
+# Importing SMOTE
+from imblearn.over_sampling import SMOTE
+Apply SMOTE only to the training set
+
+ smote = SMOTE(random_state=42)
+ X_train_bal, y_train_bal = smote.fit_resample(X_train, y_train) 
+Now we will get a balanced training set (y_train_bal) with an equal number of True and False values.
+
+4. Training the Models
+Three classifiers were trained on the balanced data:
+
+Logistic Regression
+
+Random Forest
+
+Gradient Boosting
+
+*Each model was tuned using GridSearchCV with 5-fold cross-validation and roc_auc as the scoring metric.
+
+4. Model Evaluation and Performance Comparison
+-Models were evaluated on the original (imbalanced) test set using:
+
+Accuracy
+
+F1 Score
+
+ROC AUC
+
+*Results were compiled into a summary DataFrame for comparison.
+
+5. Hyperparameter Tuning
+-Hypertuned the parameters to get the best score.
+
+Evaluated best hyperparameters and cross-validated AUC for Best Model. Then compared the Performance again.
+
+6. Feature Importance (Gradient Boosting) and Visualization
+Extracted feature importance from the best model and
+Visualized top 20 most important features using best_model.feature_importances_
+
+8. Purchase Intention prediction
+Predicted few samples.
 
 
 
