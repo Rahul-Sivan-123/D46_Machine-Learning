@@ -302,6 +302,28 @@ Target variable: `price` ( `True ` if purchase was made, else  `False `)
 - Fit and transformed the numerical features.
 -     X_scaled=scaler.fit_transform(X_encoded)
 
+  ### iv. **Train-Test Split**
+
+### 3. **Addressing Class Imbalance**
+- Target distribution was imbalanced (False > True)
+-     print(df['Revenue'].value_counts())
+      print("\nClass Distribution (as percentage):")
+      print(df['Revenue'].value_counts(normalize=True) * 100)
+    Class Distribution (as percentage):  
+    Revenue  
+    False    84.367063  
+    True     15.632937
+
+- Used `SMOTE` to oversample the minority class in training data
+-     # Importing SMOTE
+      from imblearn.over_sampling import SMOTE
+- Apply SMOTE only to the training set
+
+-      smote = SMOTE(random_state=42)
+       X_train_bal, y_train_bal = smote.fit_resample(X_train, y_train) 
+
+-  Now we will get a balanced training set (y_train_bal) with an equal number of True and False values.
+
 
 
 
