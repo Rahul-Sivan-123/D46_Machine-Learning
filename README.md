@@ -359,6 +359,22 @@ Target variable: `price` ( `True ` if purchase was made, else  `False `)
 ### 7. **Purchase Intention prediction**
 - Predicted few samples.
 
+### 8. **Conclusion**
+- This project successfully developed and tuned multiple classifiers — Logistic Regression, Random Forest, and Gradient Boosting — to predict whether an online session would result in a purchase (Revenue).
+
+# Key Outcomes:
+- Data preparation included outlier filtering, feature encoding, scaling, and class balancing.
+
+- GridSearchCV helped identify optimal hyperparameters using cross-validated ROC AUC scores.
+
+- The models were compared on an unseen test set using Accuracy, F1 Score, and ROC AUC.
+
+-     Best Performing Model: Gradient Boosting
+-      Achieved the highest ROC AUC.
+-      Balanced F1 Score with high prediction.
+-      Strong feature importance interpretability-Top drivers included PageValues, ExitRates, and ProductRelated_Duration.
+
+
 
 
 
